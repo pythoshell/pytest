@@ -6,6 +6,6 @@ why things are not cha ges
 
 
 git add .       # Stage all changes
-git commit -m "Your commit message here"
 
+git commit -m "Your commit message here"
 git push origin main
