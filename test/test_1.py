@@ -207,3 +207,6 @@ def test_15():
     names1 = ['a', 'b', 'c', 'd']
     names2 = names1
     names3 = names1[:]
+    print("Print names1", names1)
+    print("Print names2", names2)
+    print("Print names3", names3)
