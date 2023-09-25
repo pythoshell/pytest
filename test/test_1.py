@@ -1,15 +1,18 @@
-#import pytest
+# import pytest
 import random
+
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 def test_01():
     var = 503
     print("test1 -------------------")
     try:
-        print(var +'entered' )
+        print(var + 'entered')
     except TypeError:
         print("Here you cannot append integer with string")
     assert var == 503, "Value is not True"
+
 
 def test_02():
     print("test2 -------------------")
@@ -20,18 +23,21 @@ def test_02():
     print(num * 2)
 
 
+# [1, 2, 3, 1, 2, 3]
+
 
 def test_03():
     """
     split will output list based on the device
     """
-    print("test3 -------------------" )
+    print("test3 -------------------")
     import re
     Stmt1 = "Raj:x:1231:raj_01"
     a = re.split(':', Stmt1)
     print(a)
     print(type(a))
 
+['Raj', 'x', '1231', 'raj_01']
 
 def test_04():
     """
@@ -40,13 +46,16 @@ def test_04():
     print("test4 -------------------")
     var = 'python'
     print(var + 'entered')
+#pythonentered
 
 
 def test_05():
     print("test5 -------------------")
     """ below code will identify how many count of number of 23 available in the list """
-    score = [23, 33, 44, 55 , 66]
+    score = [23, 33, 44, 55, 66]
     print(score.count(23))
+
+#1
 
 def test_06():
     """
@@ -57,20 +66,28 @@ def test_06():
     val = 5.7
     print(type(val))
     new = math.floor(val)
-    print( new)
+    print(new)
     print(type(new))
+
+    """
+    <class 'float'>
+    5
+    <class 'int'>
+
+    """
 
 
 def test_07():
     """
     seperator string can be used for print statements
-
     """
     print("test7 -------------------")
     a = 'infy'
     b = 123
-    print(a,b, sep=":")
-    #print(b)
+    print(a, b, sep=":")
+    # print(b)
+
+    #infy:123
 
 
 def test_08():
@@ -82,6 +99,8 @@ def test_08():
     temp2 = {11, 12}
     print(temp1 & temp2)
     print(type(temp1 & temp2))
+
+    #{11, 12}
 
 def test_09():
     """
@@ -96,24 +115,34 @@ def test_09():
     """
     print("test9 ---------------------------------")
     print(random.randrange(4, 5, 7))
-
     print('stefan salvatore'[5:])
 
+
+    """
+    4
+    n salvatore
+
+    """
+
 def test_10():
+    print("test 10 ---------------------------------")
     x = 'abcdef'
     i = 'a'
     while i in x:
-
         x = x[:-1]
-        print(i,end=" ")
+        print(i, end=" ")
+        print(x,"while loop")
 
     for i in range(10):
-        if i ==5:
+        if i == 5:
             break
         else:
             print(i, end=" ")
     else:
         print("end")
+
+    #   .a a a a a a 0 1 2 3 4 .
+
 
 def test_11():
     print("\ntest11 ---------------------------------")
@@ -141,6 +170,8 @@ def test_12():
     a = " python program "
     print(a.lstrip('p'))
 
+    # python program
+
 def test_13():
     print("\ntest 13 ---------------------------------\n")
     """
@@ -153,16 +184,19 @@ def test_13():
     words = re.findall(r'[\w]+', name1)
     print(words)
 
+    #['Ram_09ati798', 'gmail', 'com']
+
 
 def test_14():
     print("\ntest 14 ---------------------------------\n")
     """
-    this functions only replaces number of string based on the count
-    
+    this functions only replaces number of string based on the count   
     """
-    xyz = ('apple', "applet ", 'app')
+    xyz = ('apple', "appl ", 'app')
     abc = "assassinationssss"
     print(abc.replace('s', "S", len(max(xyz))))
+
+    #aSSaSSinationSSSs
 
 def test_15():
     print("\ntest 15 ---------------------------------\n")
