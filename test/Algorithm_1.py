@@ -85,12 +85,48 @@ def factorial_iterative(n):
       return 1
    else:
       result = 1
-      for i in range(1, n + 1):
+      for i in range(1, n+1):
+         print("why n+1 in fact",i)
          result *= i
       return result
 
 
 # Test cases
-print(factorial_iterative(5))  # 120
-print(factorial_iterative(0))  # 1
-print(factorial_iterative(-1))  # Factorial is not defined for negative numbers
+#print(factorial_iterative(5))  # 120
+#print(factorial_iterative(0))  # 1
+#print(factorial_iterative(-1))  # Factorial is not defined for negative numbers
+"""
+Python function to find the maximum element in an array of integers, using different approaches:
+
+
+"""
+
+def find_max(arr):
+   if len(arr) == 0:
+      return None  # Return None for empty arrays
+   max_element = arr[0]
+   for num in arr:
+      if num > max_element:
+         max_element = num
+   return max_element
+
+print(find_max([10,22,55,77,99,34,65,76]))
+
+"""
+You can write a Python function to remove duplicates from an array of integers while 
+maintaining the order of appearance by using a for loop and a set to keep track of the seen elements. Here's a sample implementation:
+"""
+def remove_duplicates(arr):
+   seen = set()
+   result = []
+   for num in arr:
+      if num not in seen:
+         seen.add(num)
+         result.append(num)
+   return result
+
+
+# Example usage:
+original_array = [3, 2, 1, 2, 4, 3, 5, 6, 5]
+result_array = remove_duplicates(original_array)
+print("Array with duplicates removed:", result_array)

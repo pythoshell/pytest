@@ -38,3 +38,5 @@ Run Tests in Parallel: pytest -n 4
 Run Tests by Markers: pytest -m slow
 
 Run Tests by Test Name Matching: pytest -k "add"
+
+what are the cases lambda functions can use
