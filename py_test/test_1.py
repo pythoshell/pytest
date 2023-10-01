@@ -125,7 +125,7 @@ def test_09():
     """
 
 def test_10():
-    print("test 10 ---------------------------------")
+    print("py_test 10 ---------------------------------")
     x = 'abcdef'
     i = 'a'
     while i in x:
@@ -163,7 +163,7 @@ def test_11():
 
 
 def test_12():
-    print("test 12 ---------------------------------")
+    print("py_test 12 ---------------------------------")
     """
     lstrip removes leading space 
     """
@@ -173,7 +173,7 @@ def test_12():
     # python program
 
 def test_13():
-    print("\ntest 13 ---------------------------------\n")
+    print("\npy_test 13 ---------------------------------\n")
     """
     
     """
@@ -188,7 +188,7 @@ def test_13():
 
 
 def test_14():
-    print("\ntest 14 ---------------------------------\n")
+    print("\npy_test 14 ---------------------------------\n")
     """
     this functions only replaces number of string based on the count   
     """
@@ -199,7 +199,7 @@ def test_14():
     #aSSaSSinationSSSs
 
 def test_15():
-    print("\ntest 15 ---------------------------------\n")
+    print("\npy_test 15 ---------------------------------\n")
     """
     this functions only replaces number of string based on the count
 
