@@ -15,7 +15,6 @@ How to install Pytest
 5. Pytest Framework
 6. Algorithm
 7. Artificial Intelligence
-8. 
 
 
 Run All Tests in the Current Directory:
