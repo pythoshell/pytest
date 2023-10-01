@@ -130,3 +130,10 @@ def remove_duplicates(arr):
 original_array = [3, 2, 1, 2, 4, 3, 5, 6, 5]
 result_array = remove_duplicates(original_array)
 print("Array with duplicates removed:", result_array)
+
+
+"""
+  Write a function to count the number of words in a given sentence.
+  
+"""
+

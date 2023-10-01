@@ -1,7 +1,55 @@
 
 1. Xpath Building
 
-2. Download file from a website logic and code
+XPath is a powerful language for selecting elements from an XML or HTML document. Here are some common XPath building samples:
+
+**1. Selecting Elements by Tag Name:**
+
+- Select all `<p>` elements: `//p`
+- Select all `<a>` elements: `//a`
+
+**2. Selecting Elements by Attribute:**
+
+- Select all elements with the `class` attribute equal to "highlighted": `//*[@class='highlighted']`
+- Select all elements with the `id` attribute equal to "my-id": `//*[@id='my-id']`
+
+**3. Selecting Elements with Multiple Conditions:**
+
+- Select all `<a>` elements with `class` equal to "external" and `href` containing "example.com": `//a[@class='external' and contains(@href, 'example.com')]`
+
+**4. Selecting Elements by Position:**
+
+- Select the first `<li>` element in an ordered or unordered list: `//ul/li[1]`
+- Select the last `<p>` element on the page: `(//p)[last()]`
+
+**5. Selecting Elements by Text Content:**
+
+- Select all elements that contain the text "Hello, World!": `//*[contains(text(), 'Hello, World!')]`
+- Select the `<h1>` element with the exact text "Page Title": `//h1[text()='Page Title']`
+
+**6. Selecting Elements with Parent-Child Relationships:**
+
+- Select all `<li>` elements that are direct children of a `<ul>` element: `//ul/li`
+
+**7. Selecting Elements by Position within Parent:**
+
+- Select the second `<li>` element within a `<ul>`: `//ul/li[2]`
+
+**8. Selecting Elements with Wildcards:**
+
+- Select all elements with an `id` attribute starting with "item": `//*[starts-with(@id, 'item')]`
+
+**9. Selecting Elements with Partial Attribute Values:**
+
+- Select all elements with a `class` attribute containing "active": `//*[contains(@class, 'active')]`
+
+**10. Selecting Elements with an Ancestor Relationship:**
+
+- Select all `<a>` elements within a `<div>` with `class` equal to "sidebar": `//div[@class='sidebar']//a`
+
+These are just some examples of XPath expressions. XPath is a versatile language, and you can build complex expressions to precisely target the elements you need in XML or HTML documents based on their attributes, positions, text content, and relationships with other elements.
+
+2. Download file from a website logic and code --
 
 3.
 
