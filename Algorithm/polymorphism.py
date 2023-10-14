@@ -10,36 +10,38 @@ Look at the for loop at the end. Because of polymorphism we can execute the same
 
 
 class Car:
-  def __init__(self, brand, model):
-    self.brand = brand
-    self.model = model
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-  def move(self):
-    print("Drive!")
+    def move(self):
+        print("Drive!")
+
 
 class Boat:
-  def __init__(self, brand, model):
-    self.brand = brand
-    self.model = model
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-  def move(self):
-    print("Sail!")
+    def move(self):
+        print("Sail!")
+
 
 class Plane:
-  def __init__(self, brand, model):
-    self.brand = brand
-    self.model = model
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-  def move(self):
-    print("Fly!")
+    def move(self):
+        print("Fly!")
 
-car1 = Car("Ford", "Mustang")       #Create a Car class
-boat1 = Boat("Ibiza", "Touring 20") #Create a Boat class
-plane1 = Plane("Boeing", "747")     #Create a Plane class
+
+car1 = Car("Ford", "Mustang")  # Create a Car class
+boat1 = Boat("Ibiza", "Touring 20")  # Create a Boat class
+plane1 = Plane("Boeing", "747")  # Create a Plane class
 
 for x in (car1, boat1, plane1):
-  x.move()
-
+    x.move()
 
 """
 Inheritance Class Polymorphism
@@ -60,31 +62,74 @@ Because of polymorphism we can execute the same method for all classes.
 """
 
 
-
 class Vehicle:
-  def __init__(self, brand, model):
-    self.brand = brand
-    self.model = model
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-  def move(self):
-    print("Move!")
+    def move(self):
+        print("Move!")
+
 
 class Car(Vehicle):
-  pass
+    pass
+
 
 class Boat(Vehicle):
-  def move(self):
-    print("Sail!")
+    def move(self):
+        print("Sail!")
+
 
 class Plane(Vehicle):
-  def move(self):
-    print("Fly!")
+    def move(self):
+        print("Fly!")
 
-car1 = Car("Ford", "Mustang") #Create a Car object
-boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
-plane1 = Plane("Boeing", "747") #Create a Plane object
+
+car1 = Car("Ford", "Mustang")  # Create a Car object
+boat1 = Boat("Ibiza", "Touring 20")  # Create a Boat object
+plane1 = Plane("Boeing", "747")  # Create a Plane object
 
 for x in (car1, boat1, plane1):
-  print(x.brand)
-  print(x.model)
-  x.move()
+    print(x.brand)
+    print(x.model)
+    x.move()
+
+"""
+inheritance example
+
+"""
+
+
+class Bird:
+
+    def intro(self):
+        print("There are many types of birds.")
+
+    def flight(self):
+        print("Most of the birds can fly but some cannot.")
+
+
+class sparrow(Bird):
+
+    def flight(self):
+        print("Sparrows can fly.")
+
+
+class ostrich(Bird):
+
+    def flight(self):
+        print("Ostriches cannot fly.")
+
+
+obj_bird = Bird()
+obj_spr = sparrow()
+obj_ost = ostrich()
+
+obj_bird.intro()
+obj_bird.flight()
+
+obj_spr.intro()
+obj_spr.flight()
+
+obj_ost.intro()
+obj_ost.flight()

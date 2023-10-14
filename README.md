@@ -3,7 +3,7 @@ Hello guys testing the commit now to GUI
 why things are not changes
 
 git add .       # Stage all changes
-git commit -m "Your commit message here"
+git commit -m "committing Here"
 git push origin main
 DEV  branch changes going to be pushed 
 
