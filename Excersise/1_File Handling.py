@@ -79,6 +79,33 @@ Read data from a CSV file, perform some operations
 and write the results to another CSV file.
 """
 
+"""
+Name,Age,Grade
+Alice,25,95
+Bob,22,88
+Charlie,30,75
+David,28,92
+Eve,24,78
+
+Your task is to read this data, calculate the average age, 
+and save the results in a new CSV file called "results.csv.
+" Here's a Python program to accomplish this task:
+
+
+In this program:
+
+We use the csv.DictReader class to read the input CSV file, which allows us to access columns by their names.
+We calculate the total age and the number of records in the input CSV file while iterating through the rows.
+We calculate the average age.
+We use the csv.DictWriter class to create an output CSV file, specifying the field names.
+We write the average age to the output CSV file.
+After running this program, the "results.csv" file will contain the calculated average age:
+
+
+"""
+
+
+
 import csv
 
 # Read data from the input CSV file
