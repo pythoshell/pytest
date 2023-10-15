@@ -13,7 +13,6 @@ with open("sample.txt", "r") as file:
     print(contents)
 
 
-
 """
 Exercise 2: Write to a Text File
 Create a Python program that prompts the 
@@ -24,7 +23,6 @@ user to enter text and then write that text to a new text file called "output.tx
 user_input = input("Enter text: ")
 with open("output.txt", "w") as file:
     file.write(user_input)
-
 
 """
 Exercise 3: Append to a Text File
@@ -73,11 +71,46 @@ for word, freq in word_freq.items():
     print(f"{word}: {freq}")
 
 
+
 """
 Exercise 6: CSV File Operations
 Read data from a CSV file, perform some operations 
 (e.g., calculate the sum or average of a column), 
 and write the results to another CSV file.
+"""
+
+import csv
+
+# Read data from the input CSV file
+with open("data.csv", "r") as input_file:
+    reader = csv.DictReader(input_file)
+
+    # Initialize variables to calculate the average age
+    total_age = 0
+    num_records = 0
+
+    # Process each row in the input CSV file
+    for row in reader:
+        age = int(row["Age"])
+        total_age += age
+        num_records += 1
+
+# Calculate the average age
+average_age = total_age / num_records
+
+# Write the results to the output CSV file
+with open("results.csv", "w", newline='') as output_file:
+    fieldnames = ["Metric", "Value"]
+    writer = csv.DictWriter(output_file, fieldnames=fieldnames)
+
+    # Write the average age to the output CSV file
+    writer.writeheader()
+    writer.writerow({"Metric": "Average Age", "Value": average_age})
+
+print("Average age calculation completed and saved to results.csv.")
+
+
+"""
 
 Exercise 7: JSON File Operations
 Read data from a JSON file, manipulate the data 
