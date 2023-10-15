@@ -3,6 +3,8 @@ Inheritance example
 
 
 """
+
+
 class Person:
     def __init__(self, fname, lname):
         self.firstname = fname
@@ -11,12 +13,14 @@ class Person:
     def printname(self):
         print(self.firstname, self.lastname)
 
+
 class Student(Person):
     def __init__(self, fname, lname):
         super().__init__(fname, lname)
 
     def printname(self):
-        print("This is the fname" ,self.firstname)
+        print("This is the fname", self.firstname)
+
 
 x = Student("Mike", "Olsen")
 x.printname()
@@ -25,6 +29,8 @@ x.printname()
 Second Example 
 
 """
+
+
 # Python code to demonstrate how parent constructors
 # are called.
 
