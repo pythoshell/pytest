@@ -1,4 +1,3 @@
-
 """
 Exercise 1: Read a Text File
 Create a text file called "sample.txt" with some text in it.
@@ -7,11 +6,15 @@ contents of the file and print them to the console.
 
 """
 
-# Open and read a text file
-with open("sample.txt", "r") as file:
-    contents = file.read()
-    print(contents)
 
+# Open and read a text file
+def open_read():
+    with open("sample.txt", "r") as file:
+        contents = file.read()
+        print(contents)
+
+
+# open_read()
 
 """
 Exercise 2: Write to a Text File
@@ -19,20 +22,26 @@ Create a Python program that prompts the
 user to enter text and then write that text to a new text file called "output.txt."
 """
 
+
 # Get user input and write to a text file
-user_input = input("Enter text: ")
-with open("output.txt", "w") as file:
-    file.write(user_input)
+def write_text():
+    user_input = input("Enter text: ")
+    with open("output.txt", "w") as file:
+        file.write(user_input)
+
 
 """
 Exercise 3: Append to a Text File
 Modify the program from Exercise 2 to append the user's input to an existing text file, rather than overwriting it.
 
 """
-# Get user input and append to a text file
-user_input = input("Enter text: ")
-with open("output.txt", "a") as file:
-    file.write(user_input)
+
+
+def append_text():
+    # Get user input and append to a text file
+    user_input = input("Enter text: ")
+    with open("output.txt", "a") as file:
+        file.write(user_input)
 
 
 """
@@ -41,10 +50,12 @@ Write a program to count the number of lines in a text file and print the count.
 
 """
 
-# Count lines in a text file
-with open("sample.txt", "r") as file:
-    line_count = len(file.readlines())
-    print(f"Line count: {line_count}")
+
+def count_line_text():
+    # Count lines in a text file
+    with open("sample.txt", "r") as file:
+        line_count = len(file.readlines())
+        print(f"Line count: {line_count}")
 
 
 """
@@ -55,21 +66,22 @@ You can use a dictionary to store the word frequencies.
 
 """
 
-# Word frequency counter
-word_freq = {}
-with open("sample.txt", "r") as file:
-    text = file.read()
-    words = text.split()
-    for word in words:
-        word = word.strip(".,!?").lower()
-        if word in word_freq:
-            word_freq[word] += 1
-        else:
-            word_freq[word] = 1
 
-for word, freq in word_freq.items():
-    print(f"{word}: {freq}")
+def word_counter():
+    # Word frequency counter
+    word_freq = {}
+    with open("sample.txt", "r") as file:
+        text = file.read()
+        words = text.split()
+        for word in words:
+            word = word.strip(".,!?").lower()
+            if word in word_freq:
+                word_freq[word] += 1
+            else:
+                word_freq[word] = 1
 
+    for word, freq in word_freq.items():
+        print(f"{word}: {freq}")
 
 
 """
@@ -104,37 +116,39 @@ After running this program, the "results.csv" file will contain the calculated a
 
 """
 
+def csv_handle():
+    import csv
+    # Read data from the input CSV file
+    with open("C:\pyauto\pytest\Asset\csv_data.csv", "r") as input_file:
+        reader = csv.DictReader(input_file)
+
+        # Initialize variables to calculate the average age
+        total_age = 0
+        num_records = 0
+
+        # Process each row in the input CSV file
+        for row in reader:
+            age = int(row["Age"])
+
+            total_age += age
+            num_records += 1
+
+    # Calculate the average age
+    average_age = total_age / num_records
+
+    # Write the results to the output CSV file
+    with open("results.csv", "w", newline='') as output_file:
+        fieldnames = ["Metric", "Value"]
+        writer = csv.DictWriter(output_file, fieldnames=fieldnames)
+
+        # Write the average age to the output CSV file
+        writer.writeheader()
+        writer.writerow({"Metric": "Average Age", "Value": average_age})
+
+    print("Average age calculation completed and saved to results.csv.")
 
 
-import csv
-
-# Read data from the input CSV file
-with open("data.csv", "r") as input_file:
-    reader = csv.DictReader(input_file)
-
-    # Initialize variables to calculate the average age
-    total_age = 0
-    num_records = 0
-
-    # Process each row in the input CSV file
-    for row in reader:
-        age = int(row["Age"])
-        total_age += age
-        num_records += 1
-
-# Calculate the average age
-average_age = total_age / num_records
-
-# Write the results to the output CSV file
-with open("results.csv", "w", newline='') as output_file:
-    fieldnames = ["Metric", "Value"]
-    writer = csv.DictWriter(output_file, fieldnames=fieldnames)
-
-    # Write the average age to the output CSV file
-    writer.writeheader()
-    writer.writerow({"Metric": "Average Age", "Value": average_age})
-
-print("Average age calculation completed and saved to results.csv.")
+csv = csv_handle()
 
 
 """
