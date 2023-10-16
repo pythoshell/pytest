@@ -2,9 +2,9 @@
 Hello guys testing the commit now to GUI
 why things are not changes
 
-**git add .       # Stage all changes
-git commit -m "committing Here"
-git push origin main**
+** git add .       # Stage all changes
+git commit -m "web Scraping"
+git push origin main **
 DEV  branch changes going to be pushed 
 
 **How to install Pytest**
