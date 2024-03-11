@@ -2,9 +2,12 @@
 Hello guys testing the commit now to GUI
 why things are not changes
 
-** git add .       # Stage all changes
+** 
+git add .       # Stage all changes
 git commit -m "web Scraping"
-git push origin main **
+git push origin main 
+
+**
 DEV  branch changes going to be pushed 
 
 **How to install Pytest**
@@ -15,7 +18,7 @@ DEV  branch changes going to be pushed
 5. Algorithm
 6. Artificial Intelligence
 
-7. Run All Tests in the Current Directory:-- pytest 
+7. Run All Tests in the Current Directory:-- dir 
 8. Run Tests in a Specific File: -- pytest path/to/your/test_file.py
 9. Run Tests and Enter PDB (Debugger) on Failures  pytest --pdb 
 10. Run Tests and Generate Detailed Output:  pytest -r 
