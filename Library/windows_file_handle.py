@@ -8,9 +8,11 @@ def filter_directories(base_path, pattern):
     # Iterate over directories
     for root, dirs, files in os.walk(base_path):
         for directory in dirs:
+            print(directory)
             # Check if the directory name matches the regex pattern
             if regex.match(directory):
                 yield os.path.join(root, directory)
+            print(directory)
 
 
 # Usage example

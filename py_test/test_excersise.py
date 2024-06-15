@@ -1,4 +1,4 @@
-
+from Library import lib_windows_general
 
 def total(initial = 5, *num, **key):
    count = initial
@@ -8,3 +8,6 @@ def total(initial = 5, *num, **key):
       count+=key[k]
    return count
 print(total(100,2,3, clouds=50, stars=100))
+
+
+
